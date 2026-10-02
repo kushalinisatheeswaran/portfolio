@@ -1,10 +1,10 @@
 import { createElement, useEffect, useState } from "react";
-import { FiGithub, FiInstagram, FiLinkedin, FiMail } from "react-icons/fi";
+import { FiDownload, FiFolder, FiGithub, FiInstagram, FiLinkedin, FiMail } from "react-icons/fi";
 
 const roles = [
-  "Full Stack Developer",
-  "C++ Game Developer",
-  "React & Node.js Developer",
+  "Software Engineer",
+  "Full-Stack Developer",
+  "Backend Developer",
 ];
 
 const socialLinks = [
@@ -41,7 +41,7 @@ function Hero() {
 
     const timeout = setTimeout(() => {
       if (!isDeleting && text === currentRole) {
-        setTimeout(() => setIsDeleting(true), 700);
+        setTimeout(() => setIsDeleting(true), 1200);
         return;
       }
 
@@ -62,53 +62,75 @@ function Hero() {
   }, [text, isDeleting, roleIndex]);
 
   return (
-    <section id="home" className="mx-auto max-w-6xl px-6 pb-16 pt-20 md:pt-28">
+    <section id="home" className="mx-auto max-w-6xl px-6 pb-16 pt-12 md:pt-20">
       <div className="reveal rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md md:p-12">
-        <p className="mb-3 text-sm uppercase tracking-[0.3em] text-cyan-400">
-          Full Stack Developer
-        </p>
-        <h1 className="mb-5 text-4xl font-extrabold leading-tight md:text-6xl">
-          <span className="bg-gradient-to-r from-cyan-300 via-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
-            Kushalini Satheeswaran
-          </span>
-        </h1>
-        <p className="mb-4 h-8 text-lg font-semibold text-slate-200 md:text-2xl">
-          {text}
-          <span className="ml-1 animate-pulse text-cyan-400">|</span>
-        </p>
-        <p className="max-w-2xl text-slate-300">
-          Passionate developer from Sri Lanka building full-stack web apps and
-          C++ games.
-        </p>
+        <div className="flex flex-col-reverse items-center justify-between gap-10 lg:flex-row lg:items-center">
+          
+          {/* Text Content */}
+          <div className="flex-1">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">
+              Computer Engineering Undergraduate
+            </p>
+            <h1 className="mb-4 text-4xl font-extrabold leading-tight md:text-5xl lg:text-6xl">
+              <span className="bg-gradient-to-r from-cyan-300 via-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
+                Kushalini Satheeswaran
+              </span>
+            </h1>
+            <p className="mb-5 h-8 text-xl font-semibold text-slate-200 md:text-2xl">
+              {text}
+              <span className="ml-1 animate-pulse text-cyan-400">|</span>
+            </p>
+            <p className="max-w-2xl leading-relaxed text-slate-300">
+              Computer Engineering undergraduate at the University of Sri Jayewardenepura with hands-on experience building full-stack web, mobile and backend applications using technologies such as React, Next.js, Java, Spring Boot, Node.js and Python.
+            </p>
 
-        <div className="mt-8 flex flex-wrap gap-4">
-          <a
-            href="#projects"
-            className="rounded-xl bg-cyan-500 px-6 py-3 font-semibold text-slate-950 transition hover:scale-105 hover:bg-cyan-400"
-          >
-            View My Work
-          </a>
-          <a
-            href="#contact"
-            className="rounded-xl border border-cyan-400/60 px-6 py-3 font-semibold text-cyan-300 transition hover:scale-105 hover:bg-cyan-500/10"
-          >
-            Contact Me
-          </a>
-        </div>
+            {/* Main CTA Buttons */}
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href="#projects"
+                className="flex items-center gap-2 rounded-xl bg-cyan-500 px-6 py-3 font-semibold text-slate-950 transition hover:scale-[1.02] hover:bg-cyan-400"
+              >
+                <FiFolder className="text-lg" />
+                View Projects
+              </a>
+              <a
+                href="/Kushalini-Satheeswaran-CV.pdf"
+                download
+                className="flex items-center gap-2 rounded-xl border border-cyan-400/60 bg-cyan-500/10 px-6 py-3 font-semibold text-cyan-300 transition hover:scale-[1.02] hover:bg-cyan-500/20 hover:border-cyan-400"
+              >
+                <FiDownload className="text-lg" />
+                Download CV
+              </a>
+            </div>
 
-        <div className="mt-8 flex flex-wrap items-center gap-4">
-          {socialLinks.map((item) => (
-            <a
-              key={item.label}
-              href={item.url}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={item.label}
-              className="rounded-lg border border-white/10 bg-white/5 p-3 text-xl text-slate-200 transition hover:-translate-y-1 hover:border-cyan-400/60 hover:text-cyan-300"
-            >
-              {createElement(item.icon)}
-            </a>
-          ))}
+            {/* Social Links */}
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              {socialLinks.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.url}
+                  target={item.url.startsWith("mailto") ? "_self" : "_blank"}
+                  rel="noreferrer"
+                  aria-label={item.label}
+                  className="rounded-xl border border-white/10 bg-white/5 p-3 text-xl text-slate-300 transition hover:-translate-y-1 hover:border-cyan-400/60 hover:text-cyan-300 hover:bg-white/10"
+                >
+                  {createElement(item.icon)}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Profile Photo */}
+          <div className="relative shrink-0">
+            <div className="relative h-56 w-56 rounded-2xl p-1 md:h-72 md:w-72 lg:h-80 lg:w-80 bg-gradient-to-tr from-cyan-500/40 via-violet-500/40 to-fuchsia-500/40 shadow-[0_0_35px_rgba(34,211,238,0.25)]">
+              <img
+                src="/profile.jpg"
+                alt="Kushalini Satheeswaran"
+                className="h-full w-full rounded-2xl object-cover object-top shadow-inner"
+              />
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

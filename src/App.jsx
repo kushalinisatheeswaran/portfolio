@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import About from "./components/About";
+import Activities from "./components/Activities";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
@@ -17,7 +18,7 @@ function App() {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.15 }
     );
 
     const sections = document.querySelectorAll(".reveal");
@@ -32,8 +33,9 @@ function App() {
       <main>
         <Hero />
         <About />
-        <Projects />
         <Skills />
+        <Projects />
+        <Activities />
         <Contact />
       </main>
       <Footer />

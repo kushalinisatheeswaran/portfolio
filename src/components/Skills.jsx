@@ -1,31 +1,63 @@
-const skillItems = [
-  { name: "React", level: 88 },
-  { name: "Node.js", level: 82 },
-  { name: "JavaScript", level: 90 },
-  { name: "C++", level: 80 },
-  { name: "MySQL", level: 78 },
-  { name: "HTML/CSS", level: 92 },
-  { name: "Tailwind CSS", level: 86 },
-  { name: "Git", level: 84 },
+const skillCategories = [
+  {
+    title: "Languages",
+    skills: ["Java", "Python", "JavaScript", "TypeScript", "C++", "SQL"],
+  },
+  {
+    title: "Frontend",
+    skills: ["React", "Next.js", "React Native", "Expo", "HTML", "CSS", "Tailwind CSS"],
+  },
+  {
+    title: "Backend",
+    skills: ["Spring Boot", "Node.js", "Express", "Flask", "FastAPI", "Next.js Server Actions"],
+  },
+  {
+    title: "Databases",
+    skills: ["PostgreSQL", "MongoDB", "MySQL", "Firebase Firestore"],
+  },
+  {
+    title: "Authentication",
+    skills: ["JWT", "NextAuth / Auth.js", "Better Auth", "Firebase Authentication", "Spring Security"],
+  },
+  {
+    title: "Tools & Platforms",
+    skills: ["Git", "GitHub", "Vercel", "Render", "Postman", "Prisma", "Mongoose"],
+  },
+  {
+    title: "Libraries & Protocols",
+    skills: ["REST APIs", "Socket.IO", "Google Maps API", "OpenCV", "scikit-learn"],
+  },
 ];
 
 function Skills() {
   return (
     <section id="skills" className="mx-auto max-w-6xl px-6 py-16">
       <div className="reveal rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md md:p-10">
-        <h2 className="text-3xl font-bold text-slate-100 md:text-4xl">Skills</h2>
-        <div className="mt-8 grid gap-5 md:grid-cols-2">
-          {skillItems.map((skill) => (
-            <div key={skill.name} className="rounded-xl bg-slate-900/60 p-4">
-              <div className="mb-2 flex items-center justify-between">
-                <span className="font-medium text-slate-100">{skill.name}</span>
-                <span className="text-sm text-slate-400">{skill.level}%</span>
-              </div>
-              <div className="h-2 rounded-full bg-slate-700">
-                <div
-                  className="h-2 rounded-full bg-gradient-to-r from-cyan-400 to-violet-500"
-                  style={{ width: `${skill.level}%` }}
-                />
+        <h2 className="text-3xl font-bold text-slate-100 md:text-4xl">
+          Technical <span className="text-cyan-400">Skills</span>
+        </h2>
+        <p className="mt-3 max-w-2xl text-slate-300">
+          Technologies and tools utilized across web, backend, mobile, database, and system development projects.
+        </p>
+
+        <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {skillCategories.map((category) => (
+            <div
+              key={category.title}
+              className="rounded-2xl border border-white/10 bg-slate-900/60 p-5 transition hover:border-cyan-400/40"
+            >
+              <h3 className="mb-4 text-base font-semibold text-cyan-300">
+                {category.title}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {category.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-lg border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-200"
+                  >
+                    {skill}
+                  </span>
+                ))}
               </div>
             </div>
           ))}
