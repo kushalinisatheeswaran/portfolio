@@ -32,7 +32,7 @@ const skillCategories = [
 function Skills() {
   return (
     <section id="skills" className="mx-auto max-w-6xl px-6 py-16">
-      <div className="reveal rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md md:p-10">
+      <div className="reveal rounded-3xl border border-slate-700/50 bg-[#151E33] p-8 shadow-xl shadow-black/30 md:p-10">
         <h2 className="text-3xl font-bold text-slate-100 md:text-4xl">
           Technical <span className="text-cyan-400">Skills</span>
         </h2>
@@ -44,7 +44,7 @@ function Skills() {
           {skillCategories.map((category) => (
             <div
               key={category.title}
-              className="rounded-2xl border border-white/10 bg-slate-900/60 p-5 transition hover:border-cyan-400/40"
+              className="rounded-2xl border border-slate-700/50 bg-[#1C2740] p-5 shadow-md transition hover:border-cyan-400/40"
             >
               <h3 className="mb-4 text-base font-semibold text-cyan-300">
                 {category.title}

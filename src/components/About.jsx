@@ -20,7 +20,7 @@ const focusAreas = [
 function About() {
   return (
     <section id="about" className="mx-auto max-w-6xl px-6 py-16">
-      <div className="reveal rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md md:p-10">
+      <div className="reveal rounded-3xl border border-slate-700/50 bg-[#131D31] p-8 shadow-xl shadow-black/30 md:p-10">
         <h2 className="text-3xl font-bold text-slate-100 md:text-4xl">
           About <span className="text-cyan-400">Me</span>
         </h2>
@@ -33,7 +33,7 @@ function About() {
         {/* Education & Career Focus Cards */}
         <div className="mt-8 grid gap-6 md:grid-cols-2">
           {/* Education Card */}
-          <div className="rounded-2xl border border-white/10 bg-slate-900/60 p-6 backdrop-blur-sm">
+          <div className="rounded-2xl border border-slate-700/50 bg-[#1A253C] p-6 shadow-md">
             <div className="flex items-center gap-3 text-cyan-400">
               <FiBookOpen className="text-2xl" />
               <h3 className="text-xl font-semibold text-slate-100">Education</h3>
@@ -52,7 +52,7 @@ function About() {
           </div>
 
           {/* Career Focus Card */}
-          <div className="rounded-2xl border border-white/10 bg-slate-900/60 p-6 backdrop-blur-sm">
+          <div className="rounded-2xl border border-slate-700/50 bg-[#1A253C] p-6 shadow-md">
             <div className="flex items-center gap-3 text-violet-400">
               <FiBriefcase className="text-2xl" />
               <h3 className="text-xl font-semibold text-slate-100">Career Focus</h3>
@@ -82,7 +82,7 @@ function About() {
             {experienceAreas.map((area) => (
               <div
                 key={area}
-                className="flex items-center gap-3 rounded-xl border border-white/5 bg-slate-900/40 p-3.5 transition hover:border-cyan-400/30"
+                className="flex items-center gap-3 rounded-xl border border-slate-700/40 bg-[#1A253C]/80 p-3.5 transition hover:border-cyan-400/40"
               >
                 <FiCheckCircle className="shrink-0 text-cyan-400" />
                 <span className="text-sm font-medium text-slate-200">{area}</span>

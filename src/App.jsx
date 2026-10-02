@@ -28,17 +28,26 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100">
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Activities />
-        <Contact />
-      </main>
-      <Footer />
+    <div className="relative min-h-screen bg-[#0B1220] text-slate-100 selection:bg-cyan-500 selection:text-slate-950 overflow-x-hidden">
+      {/* Subtle Ambient Radial Glows */}
+      <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+        <div className="absolute -top-40 -left-40 h-[30rem] w-[30rem] rounded-full bg-cyan-500/5 blur-[140px]" />
+        <div className="absolute top-1/3 -right-40 h-[35rem] w-[35rem] rounded-full bg-blue-500/5 blur-[160px]" />
+        <div className="absolute bottom-1/4 -left-40 h-[30rem] w-[30rem] rounded-full bg-violet-500/5 blur-[150px]" />
+      </div>
+
+      <div className="relative z-10">
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+          <Activities />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -59,7 +59,7 @@ function Contact() {
               href={card.href}
               target={card.href.startsWith("mailto") ? "_self" : "_blank"}
               rel="noreferrer"
-              className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md transition hover:border-cyan-400/60 hover:-translate-y-1 hover:bg-white/10"
+              className="rounded-2xl border border-slate-700/60 bg-[#172033] p-5 shadow-lg transition hover:border-cyan-400/60 hover:-translate-y-1 hover:bg-[#1E2942]"
             >
               {createElement(card.icon, { className: "text-2xl text-cyan-300" })}
               <p className="mt-3 text-sm font-semibold text-slate-100">{card.label}</p>
@@ -69,7 +69,7 @@ function Contact() {
         </div>
 
         <form
-          className="reveal space-y-4 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md"
+          className="reveal space-y-4 rounded-2xl border border-slate-700/60 bg-[#172033] p-6 shadow-lg"
           onSubmit={handleSubmit}
         >
           <h3 className="text-xl font-semibold text-slate-100">Send a Message</h3>
@@ -85,7 +85,7 @@ function Contact() {
               required
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full rounded-xl border border-white/15 bg-slate-900/70 px-4 py-3 text-sm text-slate-100 placeholder-slate-400 outline-none transition focus:border-cyan-400"
+              className="w-full rounded-xl border border-slate-700/60 bg-[#0F172A] px-4 py-3 text-sm text-slate-100 placeholder-slate-400 outline-none transition focus:border-cyan-400"
             />
           </div>
           <div>
@@ -97,7 +97,7 @@ function Contact() {
               required
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full rounded-xl border border-white/15 bg-slate-900/70 px-4 py-3 text-sm text-slate-100 placeholder-slate-400 outline-none transition focus:border-cyan-400"
+              className="w-full rounded-xl border border-slate-700/60 bg-[#0F172A] px-4 py-3 text-sm text-slate-100 placeholder-slate-400 outline-none transition focus:border-cyan-400"
             />
           </div>
           <div>
@@ -109,7 +109,7 @@ function Contact() {
               required
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="w-full rounded-xl border border-white/15 bg-slate-900/70 px-4 py-3 text-sm text-slate-100 placeholder-slate-400 outline-none transition focus:border-cyan-400"
+              className="w-full rounded-xl border border-slate-700/60 bg-[#0F172A] px-4 py-3 text-sm text-slate-100 placeholder-slate-400 outline-none transition focus:border-cyan-400"
             />
           </div>
           <button

@@ -63,7 +63,8 @@ function Hero() {
 
   return (
     <section id="home" className="mx-auto max-w-6xl px-6 pb-16 pt-12 md:pt-20">
-      <div className="reveal rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md md:p-12">
+      {/* Clean Professional Hero Card (#172033) Distinct From Deep Navy Page (#0B1220) */}
+      <div className="reveal rounded-3xl border border-slate-700/60 bg-[#172033] p-8 shadow-xl shadow-black/40 md:p-12">
         <div className="flex flex-col-reverse items-center justify-between gap-10 lg:flex-row lg:items-center">
           
           {/* Text Content */}
@@ -112,7 +113,7 @@ function Hero() {
                   target={item.url.startsWith("mailto") ? "_self" : "_blank"}
                   rel="noreferrer"
                   aria-label={item.label}
-                  className="rounded-xl border border-white/10 bg-white/5 p-3 text-xl text-slate-300 transition hover:-translate-y-1 hover:border-cyan-400/60 hover:text-cyan-300 hover:bg-white/10"
+                  className="rounded-xl border border-slate-700/60 bg-[#1E2942] p-3 text-xl text-slate-300 transition hover:-translate-y-1 hover:border-cyan-400/60 hover:text-cyan-300 hover:bg-[#253352]"
                 >
                   {createElement(item.icon)}
                 </a>
@@ -120,14 +121,24 @@ function Hero() {
             </div>
           </div>
 
-          {/* Profile Photo */}
-          <div className="relative shrink-0">
-            <div className="relative h-56 w-56 rounded-2xl p-1 md:h-72 md:w-72 lg:h-80 lg:w-80 bg-gradient-to-tr from-cyan-500/40 via-violet-500/40 to-fuchsia-500/40 shadow-[0_0_35px_rgba(34,211,238,0.25)]">
-              <img
-                src="/profile.jpg"
-                alt="Kushalini Satheeswaran"
-                className="h-full w-full rounded-2xl object-cover object-top shadow-inner"
-              />
+          {/* Profile Photo with Refined Cyan/Violet Frame */}
+          <div className="relative shrink-0 group">
+            {/* Ambient Accent Glow Ring */}
+            <div className="absolute -inset-1.5 rounded-[2rem] bg-gradient-to-r from-cyan-500/30 via-violet-500/30 to-fuchsia-500/30 blur-lg opacity-70 transition duration-500 group-hover:opacity-100"></div>
+            
+            {/* Gradient Border Accent Ring */}
+            <div className="absolute -inset-0.5 rounded-[2rem] bg-gradient-to-tr from-cyan-400 via-violet-500 to-fuchsia-500 opacity-75 transition duration-500 group-hover:opacity-100"></div>
+
+            {/* Main Profile Frame */}
+            <div className="relative h-60 w-60 md:h-72 md:w-72 lg:h-80 lg:w-80 rounded-[1.9rem] bg-[#0F172A] p-2.5 shadow-xl shadow-black/50 border border-slate-700/60 transform transition-all duration-500 group-hover:-translate-y-1.5 group-hover:scale-[1.01]">
+              <div className="relative h-full w-full overflow-hidden rounded-[1.4rem] border border-cyan-400/40 bg-[#0B1220]">
+                <img
+                  src="/profile.jpg"
+                  alt="Kushalini Satheeswaran"
+                  className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/30 via-transparent to-transparent pointer-events-none"></div>
+              </div>
             </div>
           </div>
 

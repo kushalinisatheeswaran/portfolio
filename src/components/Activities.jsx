@@ -31,7 +31,7 @@ const activities = [
 function Activities() {
   return (
     <section id="activities" className="mx-auto max-w-6xl px-6 py-16">
-      <div className="reveal rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md md:p-10">
+      <div className="reveal rounded-3xl border border-slate-700/50 bg-[#131D31] p-8 shadow-xl shadow-black/30 md:p-10">
         <div className="flex items-center gap-3">
           <FiAward className="text-3xl text-cyan-400" />
           <h2 className="text-3xl font-bold text-slate-100 md:text-4xl">
@@ -46,7 +46,7 @@ function Activities() {
           {activities.map((act) => (
             <div
               key={act.title}
-              className="rounded-2xl border border-white/10 bg-slate-900/60 p-5 backdrop-blur-sm transition hover:border-cyan-400/40"
+              className="rounded-2xl border border-slate-700/50 bg-[#1A253C] p-5 shadow-md transition hover:border-cyan-400/40"
             >
               <div className="flex items-center gap-2 text-cyan-300">
                 <FiUsers className="shrink-0 text-base" />
