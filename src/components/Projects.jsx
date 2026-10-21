@@ -9,7 +9,7 @@ const fullStackProjects = [
     github: "https://github.com/kushalinisatheeswaran/Trip-Planner-App",
     live: "https://trip-planner-app-zeta.vercel.app",
     image: "/projects/travel-planner.png",
-    badge: { text: "Full Stack", color: "bg-cyan-500/20 text-cyan-300 border-cyan-500/40" },
+    badge: { text: "Full Stack", color: "bg-cyan-50 text-cyan-800 border-cyan-200 dark:bg-cyan-500/20 dark:text-cyan-300 dark:border-cyan-500/40" },
   },
   {
     title: "Job Application Tracker",
@@ -19,7 +19,7 @@ const fullStackProjects = [
     github: "https://github.com/kushalinisatheeswaran/Job-Application-Tracker",
     live: "https://job-application-tracker-green-iota.vercel.app",
     image: "/projects/job-tracker.png",
-    badge: { text: "Full Stack", color: "bg-violet-500/20 text-violet-300 border-violet-500/40" },
+    badge: { text: "Full Stack", color: "bg-purple-50 text-purple-800 border-purple-200 dark:bg-violet-500/20 dark:text-violet-300 dark:border-violet-500/40" },
   },
   {
     title: "E-Commerce Application",
@@ -30,7 +30,7 @@ const fullStackProjects = [
     live: "https://ecommerce-beta-olive-19.vercel.app",
     liveLabel: "Frontend Live",
     image: "/projects/ecommerce.png",
-    badge: { text: "Full Stack", color: "bg-blue-500/20 text-blue-300 border-blue-500/40" },
+    badge: { text: "Full Stack", color: "bg-blue-50 text-blue-800 border-blue-200 dark:bg-blue-500/20 dark:text-blue-300 dark:border-blue-500/40" },
   },
   {
     title: "Task Management Application",
@@ -39,7 +39,7 @@ const fullStackProjects = [
     tech: ["React", "TypeScript", "Node.js", "Express", "Firebase", "Firestore", "Recharts"],
     github: "https://github.com/kushalinisatheeswaran/TaskManagemnetApp",
     image: null,
-    badge: { text: "Collaborative App", color: "bg-fuchsia-500/20 text-fuchsia-300 border-fuchsia-500/40" },
+    badge: { text: "Collaborative App", color: "bg-fuchsia-50 text-fuchsia-800 border-fuchsia-200 dark:bg-fuchsia-500/20 dark:text-fuchsia-300 dark:border-fuchsia-500/40" },
   },
 ];
 
@@ -54,7 +54,7 @@ const systemsProjects = [
     tech: ["Python", "Flask", "PostgreSQL", "SQLAlchemy", "React Native", "Expo", "Socket.IO", "OpenCV"],
     github: "https://github.com/kushalinisatheeswaran/Intelligate-System",
     image: "/projects/intelligate.png",
-    badge: { text: "Engineering Prototype", color: "bg-emerald-500/20 text-emerald-300 border-emerald-500/40" },
+    badge: { text: "Engineering Prototype", color: "bg-emerald-50 text-emerald-800 border-emerald-200 dark:bg-emerald-500/20 dark:text-emerald-300 dark:border-emerald-500/40" },
   },
   {
     title: "Bus Tracker Backend",
@@ -64,7 +64,7 @@ const systemsProjects = [
     tech: ["Node.js", "Express", "MySQL", "REST API"],
     github: "https://github.com/kushalinisatheeswaran",
     image: null,
-    badge: { text: "Backend Architecture", color: "bg-sky-500/20 text-sky-300 border-sky-500/40" },
+    badge: { text: "Backend Architecture", color: "bg-sky-50 text-sky-800 border-sky-200 dark:bg-sky-500/20 dark:text-sky-300 dark:border-sky-500/40" },
   },
 ];
 
@@ -77,7 +77,7 @@ const mlProjects = [
     tech: ["Python", "FastAPI", "scikit-learn", "Next.js", "TypeScript", "pandas", "NetworkX"],
     github: "https://github.com/kushalinisatheeswaran/pharma-shortage-predictor",
     image: null,
-    badge: { text: "Experimental ML", color: "bg-purple-500/25 text-purple-300 border-purple-500/50" },
+    badge: { text: "Experimental ML", color: "bg-purple-50 text-purple-800 border-purple-200 dark:bg-purple-500/25 dark:text-purple-300 dark:border-purple-500/50" },
   },
 ];
 
@@ -124,30 +124,30 @@ function Projects() {
       
       {/* Featured Projects Header */}
       <div className="reveal space-y-3">
-        <div className="inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-500/10 px-3.5 py-1 text-xs font-semibold text-purple-300">
-          <FiFolder className="text-purple-400" /> Portfolio Showcase
+        <div className="inline-flex items-center gap-2 rounded-full border border-purple-200 bg-purple-50 px-3.5 py-1 text-xs font-semibold text-purple-700 dark:border-purple-500/30 dark:bg-purple-500/10 dark:text-purple-300">
+          <FiFolder className="text-purple-600 dark:text-purple-400" /> Portfolio Showcase
         </div>
-        <h2 className="text-3xl font-bold text-slate-100 md:text-4xl">
-          Featured <span className="bg-gradient-to-r from-cyan-400 via-violet-400 to-purple-400 bg-clip-text text-transparent">Projects</span>
+        <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-100 md:text-4xl">
+          Featured <span className="bg-gradient-to-r from-cyan-600 via-purple-600 to-fuchsia-600 dark:from-cyan-400 dark:via-violet-400 dark:to-purple-400 bg-clip-text text-transparent">Projects</span>
         </h2>
-        <p className="max-w-2xl text-slate-300">
+        <p className="max-w-2xl text-slate-600 dark:text-slate-300">
           Full-stack web applications, systems engineering prototypes, and machine learning software solutions.
         </p>
       </div>
 
       {/* CATEGORY A: Full-Stack Projects */}
       <div className="reveal space-y-6">
-        <div className="flex items-center justify-between border-b border-cyan-500/20 pb-3">
+        <div className="flex items-center justify-between border-b border-purple-100 dark:border-cyan-500/20 pb-3">
           <div className="flex items-center gap-3">
-            <div className="rounded-xl border border-cyan-400/40 bg-cyan-500/10 p-2 text-cyan-300">
+            <div className="rounded-xl border border-cyan-200 bg-cyan-50 p-2 text-cyan-700 dark:border-cyan-400/40 dark:bg-cyan-500/10 dark:text-cyan-300">
               <FiLayers className="text-lg" />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-slate-100">Full-Stack Projects</h3>
-              <p className="text-xs text-slate-400">Complete web and backend architectures with responsive UI and authentication</p>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">Full-Stack Projects</h3>
+              <p className="text-xs text-slate-500 dark:text-slate-400">Complete web and backend architectures with responsive UI and authentication</p>
             </div>
           </div>
-          <span className="hidden rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3 py-1 text-xs font-semibold text-cyan-300 sm:inline-block">
+          <span className="hidden rounded-full border border-cyan-200 bg-cyan-50 px-3 py-1 text-xs font-semibold text-cyan-800 dark:border-cyan-500/40 dark:bg-cyan-500/20 dark:text-cyan-300 sm:inline-block">
             {fullStackProjects.length} Projects
           </span>
         </div>
@@ -156,21 +156,20 @@ function Projects() {
           {fullStackProjects.map((project) => (
             <article
               key={project.title}
-              className="group relative flex flex-col justify-between rounded-2xl border border-slate-700/60 bg-[#1B253A] p-6 shadow-lg transition duration-300 hover:-translate-y-1.5 hover:border-cyan-400/70 hover:shadow-[0_0_25px_rgba(34,211,238,0.15)]"
+              className="group relative flex flex-col justify-between rounded-2xl border border-slate-200/80 bg-white p-6 shadow-md transition duration-300 hover:-translate-y-1.5 hover:border-cyan-300 hover:shadow-xl hover:shadow-purple-500/5 dark:border-slate-700/60 dark:bg-[#151E33] dark:shadow-lg dark:hover:border-cyan-400/80 dark:hover:shadow-[0_0_25px_rgba(34,211,238,0.18)]"
             >
-              <div className="absolute top-0 left-6 right-6 h-0.5 bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent group-hover:via-cyan-400"></div>
+              <div className="absolute top-0 left-6 right-6 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
               
               <div>
                 {/* Verified Screenshot Image */}
                 {project.image && (
-                  <div className="relative mb-5 overflow-hidden rounded-xl border border-slate-700/60 aspect-[16/9] bg-[#0B1220]">
+                  <div className="relative mb-5 overflow-hidden rounded-xl border border-slate-200 aspect-[16/9] bg-slate-100 shadow-inner dark:border-slate-700/80 dark:bg-[#0E1526]">
                     <img
                       src={project.image}
                       alt={`${project.title} screenshot`}
                       loading="lazy"
-                      className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"
+                      className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.02]"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1B253A]/50 via-transparent to-transparent pointer-events-none"></div>
                   </div>
                 )}
 
@@ -180,11 +179,11 @@ function Projects() {
                   </span>
                 </div>
 
-                <h4 className="mt-3 text-xl font-bold text-slate-100 group-hover:text-cyan-300 transition">
+                <h4 className="mt-3 text-xl font-bold text-slate-900 group-hover:text-purple-700 transition dark:text-slate-100 dark:group-hover:text-cyan-300">
                   {project.title}
                 </h4>
 
-                <p className="mt-3 text-sm leading-relaxed text-slate-300">
+                <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
                   {project.description}
                 </p>
 
@@ -192,7 +191,7 @@ function Projects() {
                   {project.tech.map((item) => (
                     <span
                       key={item}
-                      className="rounded-md border border-slate-700/60 bg-[#111827] px-2.5 py-1 text-xs font-medium text-slate-300"
+                      className="rounded-md border border-slate-200/80 bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 dark:border-cyan-500/30 dark:bg-[#111827] dark:text-cyan-200"
                     >
                       {item}
                     </span>
@@ -200,12 +199,12 @@ function Projects() {
                 </div>
               </div>
 
-              <div className="mt-6 flex flex-wrap gap-3 pt-4 border-t border-slate-700/60">
+              <div className="mt-6 flex flex-wrap gap-3 pt-4 border-t border-slate-100 dark:border-slate-700/60">
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-2 rounded-xl border border-slate-700/60 bg-[#111827] px-4 py-2 text-xs font-semibold text-slate-200 transition hover:border-cyan-400/60 hover:text-cyan-300 hover:bg-[#162035]"
+                  className="flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-2 text-xs font-semibold text-slate-800 transition hover:border-purple-300 hover:bg-slate-100 hover:text-purple-700 dark:border-slate-700/60 dark:bg-[#1E2942] dark:text-slate-200 dark:hover:border-cyan-400 dark:hover:bg-[#253352] dark:hover:text-cyan-300"
                 >
                   <FiGithub className="text-sm" />
                   GitHub Repo
@@ -215,7 +214,7 @@ function Projects() {
                     href={project.live}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center gap-2 rounded-xl border border-cyan-400/50 bg-cyan-500/10 px-4 py-2 text-xs font-semibold text-cyan-300 transition hover:bg-cyan-500/20 hover:border-cyan-400"
+                    className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 px-4 py-2 text-xs font-semibold text-white shadow-xs transition hover:from-cyan-400 hover:to-purple-500 dark:bg-none dark:bg-cyan-500 dark:text-slate-950 dark:hover:bg-cyan-400"
                   >
                     <FiExternalLink className="text-sm" />
                     {project.liveLabel || "Live Demo"}
@@ -229,17 +228,17 @@ function Projects() {
 
       {/* CATEGORY B: Systems / Engineering Projects */}
       <div className="reveal space-y-6">
-        <div className="flex items-center justify-between border-b border-sky-500/20 pb-3">
+        <div className="flex items-center justify-between border-b border-purple-100 dark:border-sky-500/20 pb-3">
           <div className="flex items-center gap-3">
-            <div className="rounded-xl border border-sky-400/40 bg-sky-500/10 p-2 text-sky-300">
+            <div className="rounded-xl border border-sky-200 bg-sky-50 p-2 text-sky-700 dark:border-sky-400/40 dark:bg-sky-500/10 dark:text-sky-300">
               <FiCpu className="text-lg" />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-slate-100">Systems & Engineering Projects</h3>
-              <p className="text-xs text-slate-400">Backend systems, transit services, and collaborative university hardware-software integrations</p>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">Systems & Engineering Projects</h3>
+              <p className="text-xs text-slate-500 dark:text-slate-400">Backend systems, transit services, and collaborative university hardware-software integrations</p>
             </div>
           </div>
-          <span className="hidden rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-1 text-xs font-semibold text-sky-300 sm:inline-block">
+          <span className="hidden rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-800 dark:border-sky-500/40 dark:bg-sky-500/20 dark:text-sky-300 sm:inline-block">
             {systemsProjects.length} Projects
           </span>
         </div>
@@ -248,21 +247,20 @@ function Projects() {
           {systemsProjects.map((project) => (
             <article
               key={project.title}
-              className="group relative flex flex-col justify-between rounded-2xl border border-slate-700/60 bg-[#1B253A] p-6 shadow-lg transition duration-300 hover:-translate-y-1.5 hover:border-sky-400/70 hover:shadow-[0_0_25px_rgba(56,189,248,0.15)]"
+              className="group relative flex flex-col justify-between rounded-2xl border border-slate-200/80 bg-white p-6 shadow-md transition duration-300 hover:-translate-y-1.5 hover:border-sky-300 hover:shadow-xl hover:shadow-purple-500/5 dark:border-slate-700/60 dark:bg-[#151E33] dark:shadow-lg dark:hover:border-sky-400/80 dark:hover:shadow-[0_0_25px_rgba(56,189,248,0.18)]"
             >
-              <div className="absolute top-0 left-6 right-6 h-0.5 bg-gradient-to-r from-transparent via-sky-400/40 to-transparent group-hover:via-sky-400"></div>
+              <div className="absolute top-0 left-6 right-6 h-0.5 bg-gradient-to-r from-transparent via-sky-400 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
               
               <div>
                 {/* Verified Screenshot Image */}
                 {project.image && (
-                  <div className="relative mb-5 overflow-hidden rounded-xl border border-slate-700/60 aspect-[16/9] bg-[#0B1220]">
+                  <div className="relative mb-5 overflow-hidden rounded-xl border border-slate-200 aspect-[16/9] bg-slate-100 shadow-inner dark:border-slate-700/80 dark:bg-[#0E1526]">
                     <img
                       src={project.image}
                       alt={`${project.title} screenshot`}
                       loading="lazy"
-                      className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"
+                      className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.02]"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1B253A]/50 via-transparent to-transparent pointer-events-none"></div>
                   </div>
                 )}
 
@@ -272,21 +270,21 @@ function Projects() {
                   </span>
                 </div>
 
-                <h4 className="mt-3 text-xl font-bold text-slate-100 group-hover:text-sky-300 transition">
+                <h4 className="mt-3 text-xl font-bold text-slate-900 group-hover:text-sky-700 transition dark:text-slate-100 dark:group-hover:text-sky-300">
                   {project.title}
                 </h4>
                 {project.subtitle && (
-                  <p className="mt-1 text-xs font-medium text-sky-300">
+                  <p className="mt-1 text-xs font-medium text-sky-700 dark:text-sky-300">
                     {project.subtitle}
                   </p>
                 )}
 
-                <p className="mt-3 text-sm leading-relaxed text-slate-300">
+                <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
                   {project.description}
                 </p>
 
                 {project.contribution && (
-                  <p className="mt-3 text-xs leading-relaxed text-sky-200/90 italic bg-[#111827] p-3 rounded-xl border border-sky-500/20">
+                  <p className="mt-3 text-xs leading-relaxed text-sky-900 italic bg-sky-50/70 p-3 rounded-xl border border-sky-200 dark:bg-sky-500/10 dark:text-sky-200 dark:border-sky-500/30">
                     {project.contribution}
                   </p>
                 )}
@@ -295,7 +293,7 @@ function Projects() {
                   {project.tech.map((item) => (
                     <span
                       key={item}
-                      className="rounded-md border border-slate-700/60 bg-[#111827] px-2.5 py-1 text-xs font-medium text-slate-300"
+                      className="rounded-md border border-slate-200/80 bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 dark:border-sky-500/30 dark:bg-[#111827] dark:text-sky-200"
                     >
                       {item}
                     </span>
@@ -303,12 +301,12 @@ function Projects() {
                 </div>
               </div>
 
-              <div className="mt-6 flex flex-wrap gap-3 pt-4 border-t border-slate-700/60">
+              <div className="mt-6 flex flex-wrap gap-3 pt-4 border-t border-slate-100 dark:border-slate-700/60">
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-2 rounded-xl border border-slate-700/60 bg-[#111827] px-4 py-2 text-xs font-semibold text-slate-200 transition hover:border-sky-400/60 hover:text-sky-300 hover:bg-[#162035]"
+                  className="flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-2 text-xs font-semibold text-slate-800 transition hover:border-sky-300 hover:bg-slate-100 hover:text-sky-700 dark:border-sky-400/40 dark:bg-sky-500/10 dark:text-sky-200 dark:hover:border-sky-400 dark:hover:bg-sky-500/20 dark:hover:text-white"
                 >
                   <FiGithub className="text-sm" />
                   GitHub Repo
@@ -321,17 +319,17 @@ function Projects() {
 
       {/* CATEGORY C: Experimental ML Projects */}
       <div className="reveal space-y-6">
-        <div className="flex items-center justify-between border-b border-purple-500/30 pb-3">
+        <div className="flex items-center justify-between border-b border-purple-100 dark:border-purple-500/20 pb-3">
           <div className="flex items-center gap-3">
-            <div className="rounded-xl border border-purple-400/40 bg-purple-500/15 p-2 text-purple-300">
+            <div className="rounded-xl border border-purple-200 bg-purple-50 p-2 text-purple-700 dark:border-purple-400/40 dark:bg-purple-500/10 dark:text-purple-300">
               <FiActivity className="text-lg" />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-slate-100">Experimental ML Projects</h3>
-              <p className="text-xs text-slate-400">Data science research, risk scoring models, and graph-based predictive algorithms</p>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">Experimental ML Projects</h3>
+              <p className="text-xs text-slate-500 dark:text-slate-400">Data science research, risk scoring models, and graph-based predictive algorithms</p>
             </div>
           </div>
-          <span className="hidden rounded-full border border-purple-500/40 bg-purple-500/20 px-3 py-1 text-xs font-semibold text-purple-300 sm:inline-block">
+          <span className="hidden rounded-full border border-purple-200 bg-purple-50 px-3 py-1 text-xs font-semibold text-purple-800 dark:border-purple-500/40 dark:bg-purple-500/20 dark:text-purple-300 sm:inline-block">
             Research & AI
           </span>
         </div>
@@ -340,7 +338,7 @@ function Projects() {
           {mlProjects.map((project) => (
             <article
               key={project.title}
-              className="group relative flex flex-col justify-between rounded-2xl border border-purple-500/40 bg-[#1B253A] p-6 shadow-lg transition duration-300 hover:-translate-y-1.5 hover:border-purple-400/80 hover:shadow-[0_0_25px_rgba(168,85,247,0.18)]"
+              className="group relative flex flex-col justify-between rounded-2xl border border-purple-200/80 bg-white p-6 shadow-md transition duration-300 hover:-translate-y-1.5 hover:border-purple-400 hover:shadow-xl hover:shadow-purple-500/5 dark:border-purple-500/40 dark:bg-[#1B253A] dark:shadow-lg dark:hover:border-purple-400/80 dark:hover:shadow-[0_0_25px_rgba(168,85,247,0.18)]"
             >
               <div className="absolute top-0 left-6 right-6 h-0.5 bg-gradient-to-r from-transparent via-purple-400 to-transparent"></div>
               
@@ -349,21 +347,21 @@ function Projects() {
                   <span className={`rounded-full border px-3 py-1 text-xs font-semibold ${project.badge.color}`}>
                     {project.badge.text}
                   </span>
-                  <span className="rounded-full border border-purple-400/50 bg-purple-500/20 px-3 py-0.5 text-[11px] font-bold uppercase tracking-wider text-purple-200">
+                  <span className="rounded-full border border-purple-300 bg-purple-100 px-3 py-0.5 text-[11px] font-bold uppercase tracking-wider text-purple-800 dark:border-purple-400/50 dark:bg-purple-500/20 dark:text-purple-200">
                     Experimental
                   </span>
                 </div>
 
-                <h4 className="mt-3 text-xl font-bold text-slate-100 group-hover:text-purple-300 transition">
+                <h4 className="mt-3 text-xl font-bold text-slate-900 group-hover:text-purple-700 transition dark:text-slate-100 dark:group-hover:text-purple-300">
                   {project.title}
                 </h4>
                 {project.subtitle && (
-                  <p className="mt-1 text-xs font-medium text-purple-300">
+                  <p className="mt-1 text-xs font-medium text-purple-700 dark:text-purple-300">
                     {project.subtitle}
                   </p>
                 )}
 
-                <p className="mt-3 text-sm leading-relaxed text-slate-300">
+                <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
                   {project.description}
                 </p>
 
@@ -371,7 +369,7 @@ function Projects() {
                   {project.tech.map((item) => (
                     <span
                       key={item}
-                      className="rounded-md border border-purple-500/30 bg-[#111827] px-2.5 py-1 text-xs font-medium text-purple-200"
+                      className="rounded-md border border-purple-200/80 bg-purple-50 px-2.5 py-1 text-xs font-medium text-purple-800 dark:border-purple-500/30 dark:bg-[#111827] dark:text-purple-200"
                     >
                       {item}
                     </span>
@@ -379,12 +377,12 @@ function Projects() {
                 </div>
               </div>
 
-              <div className="mt-6 flex flex-wrap gap-3 pt-4 border-t border-purple-500/20">
+              <div className="mt-6 flex flex-wrap gap-3 pt-4 border-t border-purple-100 dark:border-purple-500/20">
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-2 rounded-xl border border-purple-400/40 bg-purple-500/10 px-4 py-2 text-xs font-semibold text-purple-200 transition hover:bg-purple-500/20 hover:border-purple-400 hover:text-white"
+                  className="flex items-center gap-2 rounded-xl border border-purple-200 bg-purple-50 px-4 py-2 text-xs font-semibold text-purple-800 transition hover:bg-purple-100 hover:border-purple-300 dark:border-purple-400/40 dark:bg-purple-500/10 dark:text-purple-200 dark:hover:bg-purple-500/20 dark:hover:border-purple-400 dark:hover:text-white"
                 >
                   <FiGithub className="text-sm" />
                   GitHub Repo
@@ -396,12 +394,12 @@ function Projects() {
       </div>
 
       {/* CATEGORY D: Other Projects Section */}
-      <div className="reveal pt-8 border-t border-slate-800 space-y-6">
+      <div className="reveal pt-8 border-t border-purple-100 dark:border-slate-800 space-y-6">
         <div>
-          <h3 className="text-2xl font-bold text-slate-100">
-            Other <span className="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">Projects</span>
+          <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
+            Other <span className="bg-gradient-to-r from-purple-600 to-cyan-600 dark:from-violet-400 dark:to-cyan-400 bg-clip-text text-transparent">Projects</span>
           </h3>
-          <p className="mt-1 text-sm text-slate-400">
+          <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
             Utility web apps, game prototypes, and custom C++ algorithmic tools.
           </p>
         </div>
@@ -410,20 +408,20 @@ function Projects() {
           {otherProjects.map((project) => (
             <div
               key={project.title}
-              className="group flex flex-col justify-between rounded-xl border border-slate-700/50 bg-[#172033] p-5 shadow-md transition duration-300 hover:-translate-y-1 hover:border-purple-400/50 hover:bg-[#1F2C45]"
+              className="group flex flex-col justify-between rounded-xl border border-slate-200/80 bg-white p-5 shadow-xs transition duration-300 hover:-translate-y-1 hover:border-purple-300 hover:shadow-md dark:border-slate-700/50 dark:bg-[#172033] dark:shadow-md dark:hover:border-purple-400/50 dark:hover:bg-[#1F2C45]"
             >
               <div>
-                <h4 className="text-base font-semibold text-slate-100 group-hover:text-purple-300 transition">
+                <h4 className="text-base font-semibold text-slate-900 group-hover:text-purple-700 transition dark:text-slate-100 dark:group-hover:text-purple-300">
                   {project.title}
                 </h4>
-                <p className="mt-2 text-xs leading-relaxed text-slate-300">
+                <p className="mt-2 text-xs leading-relaxed text-slate-600 dark:text-slate-300">
                   {project.description}
                 </p>
                 <div className="mt-3 flex flex-wrap gap-1">
                   {project.tech.map((t) => (
                     <span
                       key={t}
-                      className="rounded bg-[#111827] px-2 py-0.5 text-[11px] font-medium text-slate-300"
+                      className="rounded bg-slate-100 px-2 py-0.5 text-[11px] font-medium text-slate-700 dark:bg-[#111827] dark:text-slate-300"
                     >
                       {t}
                     </span>
@@ -431,14 +429,14 @@ function Projects() {
                 </div>
               </div>
 
-              <div className="mt-4 flex flex-wrap gap-2 pt-3 border-t border-slate-700/50">
+              <div className="mt-4 flex flex-wrap gap-2 pt-3 border-t border-slate-100 dark:border-slate-700/50">
                 {project.githubLinks.map((link) => (
                   <a
                     key={link.label}
                     href={link.url}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center gap-1.5 text-xs font-semibold text-cyan-400 transition hover:text-purple-300 hover:underline"
+                    className="flex items-center gap-1.5 text-xs font-semibold text-purple-700 transition hover:text-cyan-600 hover:underline dark:text-cyan-400 dark:hover:text-purple-300"
                   >
                     <FiGithub className="text-xs" />
                     {link.label}

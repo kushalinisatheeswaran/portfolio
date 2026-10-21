@@ -14,11 +14,11 @@ const links = [
 
 function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-slate-950/90">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 text-sm text-slate-300 md:flex-row">
-        <p className="flex items-center gap-2">
-          Built by Kushalini Satheeswaran
-          <FiHeart className="text-pink-400" />
+    <footer className="border-t border-purple-100/80 bg-white/85 text-slate-700 dark:border-slate-800/80 dark:bg-[#0B1220]/90 dark:text-slate-300 transition-colors duration-300">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 text-sm md:flex-row">
+        <p className="flex items-center gap-2 text-slate-600 dark:text-slate-300">
+          Built by <span className="font-semibold text-slate-900 dark:text-slate-100">Kushalini Satheeswaran</span>
+          <FiHeart className="text-pink-500 dark:text-pink-400" />
         </p>
 
         <div className="flex items-center gap-3">
@@ -29,7 +29,7 @@ function Footer() {
               target={item.href.startsWith("mailto") ? "_self" : "_blank"}
               rel="noreferrer"
               aria-label={item.label}
-              className="rounded-lg border border-white/10 bg-white/5 p-2 text-lg transition hover:border-cyan-400/60 hover:text-cyan-300"
+              className="rounded-lg border border-purple-200 bg-purple-50/60 p-2 text-lg text-purple-700 transition hover:border-purple-300 hover:text-purple-600 dark:border-slate-700 dark:bg-slate-800/80 dark:text-slate-300 dark:hover:border-cyan-400 dark:hover:text-cyan-400"
             >
               {createElement(item.icon)}
             </a>

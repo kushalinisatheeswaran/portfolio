@@ -31,14 +31,14 @@ const activities = [
 function Activities() {
   return (
     <section id="activities" className="mx-auto max-w-6xl px-6 py-16">
-      <div className="reveal rounded-3xl border border-slate-700/50 bg-[#131D31] p-8 shadow-xl shadow-black/30 md:p-10">
+      <div className="reveal rounded-3xl border border-slate-200/80 bg-white p-8 shadow-sm dark:border-slate-700/50 dark:bg-[#151E33] dark:shadow-xl dark:shadow-black/30 md:p-10 transition-colors duration-300">
         <div className="flex items-center gap-3">
-          <FiAward className="text-3xl text-cyan-400" />
-          <h2 className="text-3xl font-bold text-slate-100 md:text-4xl">
-            Activities & <span className="text-cyan-400">Leadership</span>
+          <FiAward className="text-3xl text-purple-600 dark:text-cyan-400" />
+          <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-100 md:text-4xl">
+            Activities & <span className="bg-gradient-to-r from-purple-600 to-cyan-600 dark:from-violet-400 dark:to-cyan-400 bg-clip-text text-transparent">Leadership</span>
           </h2>
         </div>
-        <p className="mt-3 max-w-2xl text-slate-300">
+        <p className="mt-3 max-w-2xl text-slate-600 dark:text-slate-300">
           Extracurricular involvements, student communities, and event organization roles.
         </p>
 
@@ -46,18 +46,18 @@ function Activities() {
           {activities.map((act) => (
             <div
               key={act.title}
-              className="rounded-2xl border border-slate-700/50 bg-[#1A253C] p-5 shadow-md transition hover:border-cyan-400/40"
+              className="rounded-2xl border border-purple-100 bg-[#F9F8FF] p-5 shadow-xs transition hover:border-purple-300 hover:shadow-sm dark:border-slate-700/50 dark:bg-[#1A253C] dark:shadow-md dark:hover:border-cyan-400/40"
             >
-              <div className="flex items-center gap-2 text-cyan-300">
+              <div className="flex items-center gap-2 text-purple-700 dark:text-cyan-300">
                 <FiUsers className="shrink-0 text-base" />
                 <span className="text-xs font-semibold uppercase tracking-wider">
                   {act.role}
                 </span>
               </div>
-              <h3 className="mt-2 text-base font-bold text-slate-100">
+              <h3 className="mt-2 text-base font-bold text-slate-900 dark:text-slate-100">
                 {act.title}
               </h3>
-              <p className="mt-2 text-xs leading-relaxed text-slate-300">
+              <p className="mt-2 text-xs leading-relaxed text-slate-600 dark:text-slate-300">
                 {act.description}
               </p>
             </div>

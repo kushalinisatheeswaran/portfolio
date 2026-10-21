@@ -43,10 +43,10 @@ function Contact() {
   return (
     <section id="contact" className="mx-auto max-w-6xl px-6 py-16">
       <div className="reveal">
-        <h2 className="text-3xl font-bold text-slate-100 md:text-4xl">
-          Get In <span className="text-cyan-400">Touch</span>
+        <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-100 md:text-4xl">
+          Get In <span className="bg-gradient-to-r from-cyan-600 to-purple-600 dark:from-cyan-400 dark:to-cyan-400 bg-clip-text text-transparent">Touch</span>
         </h2>
-        <p className="mt-3 text-slate-300">
+        <p className="mt-3 text-slate-600 dark:text-slate-300">
           Feel free to connect for software engineering internship opportunities, project collaborations, or technical discussions.
         </p>
       </div>
@@ -59,21 +59,21 @@ function Contact() {
               href={card.href}
               target={card.href.startsWith("mailto") ? "_self" : "_blank"}
               rel="noreferrer"
-              className="rounded-2xl border border-slate-700/60 bg-[#172033] p-5 shadow-lg transition hover:border-cyan-400/60 hover:-translate-y-1 hover:bg-[#1E2942]"
+              className="rounded-2xl border border-purple-100 bg-white p-5 shadow-sm transition hover:border-purple-300 hover:-translate-y-1 hover:shadow-md dark:border-slate-700/60 dark:bg-[#172033] dark:shadow-lg dark:hover:border-cyan-400/60 dark:hover:bg-[#1E2942]"
             >
-              {createElement(card.icon, { className: "text-2xl text-cyan-300" })}
-              <p className="mt-3 text-sm font-semibold text-slate-100">{card.label}</p>
-              <p className="mt-1 break-words text-xs text-slate-400">{card.value}</p>
+              {createElement(card.icon, { className: "text-2xl text-purple-600 dark:text-cyan-300" })}
+              <p className="mt-3 text-sm font-semibold text-slate-900 dark:text-slate-100">{card.label}</p>
+              <p className="mt-1 break-words text-xs text-slate-500 dark:text-slate-400">{card.value}</p>
             </a>
           ))}
         </div>
 
         <form
-          className="reveal space-y-4 rounded-2xl border border-slate-700/60 bg-[#172033] p-6 shadow-lg"
+          className="reveal space-y-4 rounded-2xl border border-purple-100 bg-white p-6 shadow-md dark:border-slate-700/60 dark:bg-[#172033] dark:shadow-lg transition-colors duration-300"
           onSubmit={handleSubmit}
         >
-          <h3 className="text-xl font-semibold text-slate-100">Send a Message</h3>
-          <p className="text-xs text-slate-400">
+          <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-100">Send a Message</h3>
+          <p className="text-xs text-slate-500 dark:text-slate-400">
             Submitting this form prepares a direct email message via your email application.
           </p>
           <div>
@@ -85,7 +85,7 @@ function Contact() {
               required
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full rounded-xl border border-slate-700/60 bg-[#0F172A] px-4 py-3 text-sm text-slate-100 placeholder-slate-400 outline-none transition focus:border-cyan-400"
+              className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-purple-500 focus:bg-white dark:border-slate-700/60 dark:bg-[#0F172A] dark:text-slate-100 dark:placeholder-slate-500 dark:focus:border-cyan-400 dark:focus:bg-[#0F172A]"
             />
           </div>
           <div>
@@ -97,7 +97,7 @@ function Contact() {
               required
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full rounded-xl border border-slate-700/60 bg-[#0F172A] px-4 py-3 text-sm text-slate-100 placeholder-slate-400 outline-none transition focus:border-cyan-400"
+              className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-purple-500 focus:bg-white dark:border-slate-700/60 dark:bg-[#0F172A] dark:text-slate-100 dark:placeholder-slate-500 dark:focus:border-cyan-400 dark:focus:bg-[#0F172A]"
             />
           </div>
           <div>
@@ -109,12 +109,12 @@ function Contact() {
               required
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="w-full rounded-xl border border-slate-700/60 bg-[#0F172A] px-4 py-3 text-sm text-slate-100 placeholder-slate-400 outline-none transition focus:border-cyan-400"
+              className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-purple-500 focus:bg-white dark:border-slate-700/60 dark:bg-[#0F172A] dark:text-slate-100 dark:placeholder-slate-500 dark:focus:border-cyan-400 dark:focus:bg-[#0F172A]"
             />
           </div>
           <button
             type="submit"
-            className="flex items-center gap-2 rounded-xl bg-cyan-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400"
+            className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:from-cyan-400 hover:to-purple-500 dark:bg-none dark:bg-cyan-500 dark:text-slate-950 dark:hover:bg-cyan-400 dark:shadow-none"
           >
             <FiSend />
             Send Email
